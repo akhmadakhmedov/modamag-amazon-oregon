@@ -51,7 +51,7 @@ class Product(models.Model):
 
 class VariationManager(models.Manager):
     def sizes(self):
-        return super(VariationManager, self).filter(variation_category = 'size', is_active=True)
+        return super(VariationManager, self).filter(variation_category = 'размер', is_active=True)
     
     def colors(self):
          return super(VariationManager, self).filter(variation_category = 'color', is_active=True)
