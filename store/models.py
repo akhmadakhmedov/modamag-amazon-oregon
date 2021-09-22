@@ -58,7 +58,7 @@ class VariationManager(models.Manager):
 
 
 variation_category_choice = (
-    ('размер', 'size'),
+    ('size', 'размер'),
     ('color', 'color'),
 )
 
