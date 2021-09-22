@@ -50,16 +50,16 @@ class Product(models.Model):
 
 
 class VariationManager(models.Manager):
-    def sizes(self):
-        return super(VariationManager, self).filter(variation_category = 'size', is_active=True)
+    def razmers(self):
+        return super(VariationManager, self).filter(variation_category = 'razmer', is_active=True)
     
-    def colors(self):
-         return super(VariationManager, self).filter(variation_category = 'color', is_active=True)
+    def svets(self):
+         return super(VariationManager, self).filter(variation_category = 'svet', is_active=True)
 
 
 variation_category_choice = (
-    ('size', 'size'),
-    ('color', 'color'),
+    ('razmer', 'razmer'),
+    ('svet', 'svet'),
 )
 
 class Variation(models.Model):

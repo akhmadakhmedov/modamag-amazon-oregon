@@ -57,9 +57,9 @@
 		<div class="row">
 			<div class="item-option-select">
 				<h6>Выберите размер</h6>	
-				<select name='size' class="form-control" required>
+				<select name='razmer' class="form-control" required>
 				<option value="" disabled selected>Выберите размер</option>
-				{% for i in single_product.variation_set.sizes %}
+				{% for i in single_product.variation_set.razmers %}
 					<option value='{{ i.variation_value | lower}}'>{{ i.variation_value | capfirst}}</option>
 				{% endfor %}		
 				</select>
@@ -69,9 +69,9 @@
 		<div class='row'>
 			<div class="item-option-select">
 				<h6>Выберите цвет</h6>	
-				<select name='color' class="form-control" required>
+				<select name='svet' class="form-control" required>
 				<option value="" disabled selected>Выберите цвет</option>
-				{% for i in single_product.variation_set.colors %}
+				{% for i in single_product.variation_set.svets %}
 					<option value='{{ i.variation_value | lower}}'>{{ i.variation_value | capfirst}}</option>
 				{% endfor %}		
 				</select>
